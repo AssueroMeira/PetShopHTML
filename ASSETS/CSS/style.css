@@ -82,6 +82,31 @@ footer a:hover {
   height: 90px;
 }
 
+.catalog-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.services-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.btn-lg {
+  font-size: 18px;
+  padding: 12px 24px;
+}
+
 @media (max-width: 768px) {
   #home-content {
     flex-direction: column;

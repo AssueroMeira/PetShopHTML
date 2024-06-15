@@ -13,8 +13,8 @@ document.getElementById('home-content').style.display = 'flex';
 document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevenir o comportamento padrão do formulário
     const email = document.getElementById('email').value;
-    document.getElementById('userName').textContent = email;
-    showSection('bemvindo');
+    document.getElementById('nomeTutor').textContent = email.split('@')[0]; // Exibir o nome do tutor
+    showSection('escolherPet');
 });
 
 function selectPet(petName) {
@@ -22,10 +22,10 @@ function selectPet(petName) {
     showSection('petDetails');
 }
 
-$(function () {
-    $("#datepicker-banho, #datepicker-tosa, #datepicker-taxi").datepicker({
-        onSelect: function (dateText, inst) {
-            console.log(dateText);
-        }
+// Função para transição automática do carrossel
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = new bootstrap.Carousel(document.querySelector('#carouselExampleIndicators'), {
+        interval: 3000,
+        ride: 'carousel'
     });
 });
